@@ -1,0 +1,26 @@
+Log Dosyası Oluşturuldu: 09.10.2023 04:53:10
+
+[TextFileLogger] - 09.10.2023 04:53:16 --  [Request] HTTP GET "/Movies"
+[TextFileLogger] - 09.10.2023 04:53:30 --  [Error] HTTP GET "/Movies" - StatusCode: 500 InternalServerError. Error Message: Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[MovieStoreWebAPI.Entity.Concrete.Movie, MovieStoreWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[MovieStoreWebAPI.Application.MovieOperations.Queries.QueryViewModel.MovieViewModel, MovieStoreWebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]. Time: 14082,7127ms.
+[TextFileLogger] - 09.10.2023 04:57:31 --  [Request] HTTP GET "/Movies"
+[TextFileLogger] - 09.10.2023 04:57:35 --  [Response] HTTP GET "/Movies" responded. StatusCode: 200 OK. Time: 4,1187315ms.
+[TextFileLogger] - 09.10.2023 04:59:05 --  [Request] HTTP GET "/Movies"
+[TextFileLogger] - 09.10.2023 04:59:05 --  [Response] HTTP GET "/Movies" responded. StatusCode: 200 OK. Time: 0,512476ms.
+[TextFileLogger] - 09.10.2023 05:39:28 --  [Request] HTTP GET "/Movies/2"
+[TextFileLogger] - 09.10.2023 05:39:29 --  [Response] HTTP GET "/Movies/2" responded. StatusCode: 200 OK. Time: 0,7403453ms.
+[TextFileLogger] - 09.10.2023 05:39:32 --  [Request] HTTP GET "/Movies/1"
+[TextFileLogger] - 09.10.2023 05:39:32 --  [Response] HTTP GET "/Movies/1" responded. StatusCode: 200 OK. Time: 0,1318668ms.
+[TextFileLogger] - 09.10.2023 05:39:38 --  [Request] HTTP GET "/Movies/2"
+[TextFileLogger] - 09.10.2023 05:39:39 --  [Response] HTTP GET "/Movies/2" responded. StatusCode: 200 OK. Time: 0,0142166ms.
+[TextFileLogger] - 09.10.2023 05:39:49 --  [Request] HTTP GET "/Movies/3"
+[TextFileLogger] - 09.10.2023 05:39:49 --  [Response] HTTP GET "/Movies/3" responded. StatusCode: 200 OK. Time: 0,0058757ms.
+[TextFileLogger] - 09.10.2023 05:39:51 --  [Request] HTTP GET "/Movies/4"
+[TextFileLogger] - 09.10.2023 05:39:51 --  [Response] HTTP GET "/Movies/4" responded. StatusCode: 200 OK. Time: 0,0070087ms.
+[TextFileLogger] - 09.10.2023 05:39:54 --  [Request] HTTP GET "/Movies/5"
+[TextFileLogger] - 09.10.2023 05:39:54 --  [Response] HTTP GET "/Movies/5" responded. StatusCode: 200 OK. Time: 0,0269596ms.
+[TextFileLogger] - 09.10.2023 05:39:58 --  [Request] HTTP GET "/Movies"
+[TextFileLogger] - 09.10.2023 05:39:58 --  [Response] HTTP GET "/Movies" responded. StatusCode: 200 OK. Time: 0,1296195ms.
