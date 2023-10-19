@@ -22,7 +22,7 @@ namespace MovieStoreWebAPI.UnitTests.Extensions
                 context.SaveChanges();
                 context.Movies.AddRange(GetMovie(context));
                 context.SaveChanges();
-                context.ActorMovieRelationships.AddRange(GetActorMovieRelationship(context));
+                context.ActorsMovies.AddRange(GetActorMovie(context));
                 context.Customers.AddRange(GetCustomers());
                 context.SaveChanges();
             }
@@ -43,155 +43,155 @@ namespace MovieStoreWebAPI.UnitTests.Extensions
             return customers;
         }
 
-        private static List<ActorMovieRelationship> GetActorMovieRelationship(MovieStoreDbContext context)
+        private static List<ActorMovie> GetActorMovie(MovieStoreDbContext context)
         {
-            var actorsInterstellar = new List<ActorMovieRelationship>()
+            var actorsInterstellar = new List<ActorMovie>()
             {
                 //Interstellar
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Interstellar").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Matthew" && a.Surname=="McConaughey").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Interstellar").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Anne" && a.Surname=="Hathaway").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Interstellar").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Jessica" && a.Surname=="Chastain").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Interstellar").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Michael" && a.Surname=="Caine").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Interstellar").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Matt" && a.Surname=="Damon").Id
                 }
             };
-            var actorsTheGreenMile = new List<ActorMovieRelationship>()
+            var actorsTheGreenMile = new List<ActorMovie>()
             {
                 //The Green Mile
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "The Green Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Tom" && a.Surname == "Hanks").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "The Green Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Michael" && a.Surname == "Clarke Duncan").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "The Green Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "David" && a.Surname == "Morse").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "The Green Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Bonnie" && a.Surname == "Hunt").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "The Green Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "James" && a.Surname == "Cromwell").Id
                 }
             };
-            var actors8Mile = new List<ActorMovieRelationship>()
+            var actors8Mile = new List<ActorMovie>()
             {
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "8 Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Marshall" && a.Surname == "Mathers").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "8 Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Brittany" && a.Surname == "Murphy").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "8 Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Mekhi" && a.Surname == "Phifer").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "8 Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Kim" && a.Surname == "Basinger").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                     MovieId = context.Movies.FirstOrDefault(m => m.Title == "8 Mile").Id,
                     ActorId = context.Actors.FirstOrDefault(a => a.Name == "Evan" && a.Surname == "Jones").Id
                 }
             };
-            var actorsDoNotDisturb = new List<ActorMovieRelationship>()
+            var actorsDoNotDisturb = new List<ActorMovie>()
             {
                 //Interstellar
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Do Not Disturb").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Cem" && a.Surname=="Yılmaz").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Do Not Disturb").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Ahsen" && a.Surname=="Eroglu").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Do Not Disturb").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Nilperi" && a.Surname=="Sahinkaya").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Do Not Disturb").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Özge" && a.Surname=="Borak").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="Do Not Disturb").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Bülent" && a.Surname=="Şakrak").Id
                 }
             };
-            var actorsInTime = new List<ActorMovieRelationship>()
+            var actorsInTime = new List<ActorMovie>()
             {
                 //Interstellar
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="In Time").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Justin" && a.Surname=="Timberlake").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="In Time").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Amanda" && a.Surname=="Seyfried").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="In Time").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Cillian" && a.Surname=="Murphy").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="In Time").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Olivia" && a.Surname=="Wilde").Id
                 },
-                new ActorMovieRelationship()
+                new ActorMovie()
                 {
                    MovieId=context.Movies.FirstOrDefault(m=>m.Title=="In Time").Id,
                    ActorId=context.Actors.FirstOrDefault(a=>a.Name=="Alex" && a.Surname=="Pettyfer").Id
                 }
             };
-            var actorMovieRelationShips = new List<ActorMovieRelationship>();
-            actorMovieRelationShips.AddListRange(actorsInterstellar, actorsTheGreenMile, actors8Mile, actorsDoNotDisturb, actorsInTime);
-            return actorMovieRelationShips;
+            var actorsMovies = new List<ActorMovie>();
+            actorsMovies.AddListRange(actorsInterstellar, actorsTheGreenMile, actors8Mile, actorsDoNotDisturb, actorsInTime);
+            return actorsMovies;
         }
 
         private static List<Movie> GetMovie(MovieStoreDbContext context)

@@ -22,7 +22,8 @@ namespace MovieStoreWebAPI.Application.MovieOperations.Queries.QueryHandler.GetM
             var movies = _dbContext.Movies
                 .Include(m => m.Genre)
                 .Include(m => m.Director)
-                .Include(m => m.ActorMovieRelationship).ThenInclude(arm=>arm.Actor)
+                .Include(m => m.Actors).ThenInclude(arm => arm.Actor)
+                .Where(m => m.IsActive)
                 .OrderBy(m => m.Id)
                 .ToList();
 

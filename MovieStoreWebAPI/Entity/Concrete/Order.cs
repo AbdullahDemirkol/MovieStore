@@ -6,7 +6,7 @@ namespace MovieStoreWebAPI.Entity.Concrete
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public DateTime TransactionTime { get; set; } = DateTime.Now;
+        public DateTime TransactionTime { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public int MovieId { get; set; }

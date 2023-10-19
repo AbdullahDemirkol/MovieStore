@@ -17,7 +17,7 @@ namespace MovieStoreWebAPI.Application.CustomerOperations.Commands.CommandHandle
         }
         public Token Handle()
         {
-            var customer = _dbContext.Customers.FirstOrDefault(c => c.RefreshToken == RefreshToken && c.RefreshTokenExpireDate > DateTime.Now);
+            var customer = _dbContext.Customers.FirstOrDefault(c => c.RefreshToken == RefreshToken && c.RefreshTokenExpireDate > DateTime.Now && c.IsActive);
             if (customer is not null)
             {
                 TokenHandler handler = new TokenHandler(_configuration);

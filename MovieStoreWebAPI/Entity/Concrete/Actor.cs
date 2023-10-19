@@ -8,6 +8,6 @@ namespace MovieStoreWebAPI.Entity.Concrete
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public ICollection<ActorMovie> Movies { get; set; }
     }
 }

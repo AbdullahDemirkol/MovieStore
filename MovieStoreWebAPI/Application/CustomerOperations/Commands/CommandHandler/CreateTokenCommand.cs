@@ -21,7 +21,7 @@ namespace MovieStoreWebAPI.Application.CustomerOperations.Commands.CommandHandle
         }
         public Token Handle()
         {
-            var customer=_dbContext.Customers.FirstOrDefault(c=>c.Email==Model.Email && c.Password==Model.Password);
+            var customer=_dbContext.Customers.FirstOrDefault(c=>c.Email==Model.Email && c.Password==Model.Password && c.IsActive);
             if (customer is not null)
             {
                 TokenHandler handler = new TokenHandler(_configuration);

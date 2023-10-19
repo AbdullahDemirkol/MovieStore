@@ -18,11 +18,11 @@ namespace MovieStoreWebAPI.Application.MovieOperations.Queries.QueryHandler.GetM
         }
         public MovieViewModel Handle()
         {
-            var movie=_dbContext.Movies
+            var movie = _dbContext.Movies
                 .Include(m => m.Genre)
                 .Include(m => m.Director)
-                .Include(m => m.ActorMovieRelationship).ThenInclude(arm => arm.Actor)
-                .FirstOrDefault(m=>m.Id==MovieId);
+                .Include(m => m.Actors).ThenInclude(arm => arm.Actor)
+                .FirstOrDefault(m => m.Id == MovieId && m.IsActive);
 
             if (movie is null)
             {

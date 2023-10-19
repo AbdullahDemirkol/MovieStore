@@ -12,8 +12,8 @@ namespace MovieStoreWebAPI.Entity.Concrete
         public string Password { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpireDate { get; set; }
-        public ICollection<Genre> FavoriteGenre { get; set; }
-        public ICollection<Order> Orders { get; set; }
-        public bool IsAvtive { get; set; } = true;
+        public ICollection<Genre> FavoriteGenre { get; set; } = new List<Genre>();
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
+        public bool IsActive { get; set; } = true;
     }
 }

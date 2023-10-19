@@ -40,7 +40,7 @@ namespace MovieStoreWebAPI.Application.TokenOperations.Commands.CommandHandler
         {
             return Guid.NewGuid().ToString();
         }
-        private IEnumerable<Claim> SetClaims(Customer customer)
+        private ICollection<Claim> SetClaims(Customer customer)
         {
             var claims = new List<Claim>()
             {

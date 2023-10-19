@@ -2,7 +2,7 @@
 
 namespace MovieStoreWebAPI.Entity.Concrete
 {
-    public class ActorMovieRelationship
+    public class ActorMovie
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

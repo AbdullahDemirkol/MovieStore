@@ -13,6 +13,7 @@ namespace MovieStoreWebAPI.Entity.Concrete
         public int DirectorId { get; set; }
         public Director Director { get; set; }
         public decimal Price { get; set; }
-        public IEnumerable<ActorMovieRelationship> ActorMovieRelationship { get; set; }
+        public ICollection<ActorMovie> Actors { get; set; } = new List<ActorMovie>();
+        public bool IsActive { get; set; } = true;
     }
 }

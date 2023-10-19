@@ -7,6 +7,6 @@ namespace MovieStoreWebAPI.Entity.Concrete
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsAvtive { get; set; } = true;
+        public bool IsActive { get; set; } = true;
     }
 }
